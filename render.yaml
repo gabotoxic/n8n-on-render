@@ -22,12 +22,12 @@ services:
       - key: GENERIC_TIMEZONE
         value: America/Santiago
       - key: N8N_ENCRYPTION_KEY
-        value: CAMBIA_ESTO_POR_UNA_LLAVE_SECRETA_LARGA
+        value: jD3!skL99aPqrTzX8WmQb7nYc4@vZu0f   # 👈 cambia esto por tu clave larga
       - key: N8N_BASIC_AUTH_ACTIVE
         value: "true"
       - key: N8N_BASIC_AUTH_USER
         value: admin
       - key: N8N_BASIC_AUTH_PASSWORD
-        value: CAMBIA_ESTE_PASSWORD
+        value: MiClaveSegura2025   # 👈 cámbialo por tu contraseña
       - key: CAREGIVER_CHAT_ID
         value: ""
