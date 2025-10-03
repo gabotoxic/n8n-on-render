@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: n8n-hipertension
+    env: docker
+    plan: free
+    image: n8nio/n8n:latest
+    autoDeploy: true
+    healthCheckPath: /
+    disk:
+      name: n8n-data
+      mountPath: /home/node/.n8n
+      sizeGB: 2
+    envVars:
+      - key: N8N_HOST
+        value: n8n-hipertension.onrender.com
+      - key: N8N_PROTOCOL
+        value: https
+      - key: N8N_PORT
+        value: 5678
+      - key: WEBHOOK_URL
+        value: https://n8n-hipertension.onrender.com/
+      - key: GENERIC_TIMEZONE
+        value: America/Santiago
+      - key: N8N_ENCRYPTION_KEY
+        value: CAMBIA_ESTO_POR_UNA_LLAVE_SECRETA_LARGA
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        value: admin
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: CAMBIA_ESTE_PASSWORD
+      - key: CAREGIVER_CHAT_ID
+        value: ""
